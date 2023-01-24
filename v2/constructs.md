@@ -268,6 +268,8 @@ L1 constructs are exactly the resources defined by AWS CloudFormation—no more,
 #### [ TypeScript ]
 
 ```
+import * as s3 from 'aws-cdk-lib/aws-s3';
+
 const bucket = new s3.CfnBucket(this, "MyBucket", {
   bucketName: "MyBucket"
 });
@@ -277,6 +279,8 @@ const bucket = new s3.CfnBucket(this, "MyBucket", {
 #### [ JavaScript ]
 
 ```
+const s3 = require('aws-cdk-lib/aws-s3');
+
 const bucket = new s3.CfnBucket(this, "MyBucket", {
   bucketName: "MyBucket"
 });
@@ -286,6 +290,8 @@ const bucket = new s3.CfnBucket(this, "MyBucket", {
 #### [ Python ]
 
 ```
+import aws_cdk.aws_s3 as s3
+
 bucket = s3.CfnBucket(self, "MyBucket", bucket_name="MyBucket")
 ```
 
@@ -293,6 +299,8 @@ bucket = s3.CfnBucket(self, "MyBucket", bucket_name="MyBucket")
 #### [ Java ]
 
 ```
+import software.amazon.awscdk.services.s3.*;
+
 CfnBucket bucket = new CfnBucket.Builder().bucketName("MyBucket").build();
 ```
 
@@ -300,6 +308,8 @@ CfnBucket bucket = new CfnBucket.Builder().bucketName("MyBucket").build();
 #### [ C\# ]
 
 ```
+using Amazon.CDK.AWS.S3;
+
 var bucket = new CfnBucket(this, "MyBucket", new CfnBucketProps
 {
     BucketName= "MyBucket"
@@ -310,9 +320,14 @@ var bucket = new CfnBucket(this, "MyBucket", new CfnBucketProps
 #### [ Go ]
 
 ```
-	awss3.NewCfnBucket(stack, jsii.String("MyBucket"), &awss3.CfnBucketProps{
-		BucketName: jsii.String("MyBucket"),
-	})
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
+	"github.com/aws/jsii-runtime-go"
+)
+
+awss3.NewCfnBucket(stack, jsii.String("MyBucket"), &awss3.CfnBucketProps{
+	BucketName: jsii.String("MyBucket"),
+})
 ```
 
 ------
